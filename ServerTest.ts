@@ -40,7 +40,7 @@ namespace ServerTest {
         //* = inhalte der Ressource wird für alle Zugänglich gemacht
         
         // Response-Body
-        _response.write("Deine Bestellung war erfolgreich!");
+        _response.write("Servermeldung: Deine Bestellung war erfolgreich!");
 
 
         // ? Ruft parse funktion aus node.d.ts auf und übergibt request.url und den boolean wert true
