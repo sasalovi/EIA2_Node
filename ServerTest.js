@@ -31,11 +31,7 @@ var ServerTest;
         //Access-Control.... = Bestimmt �ber die Freigabeeinstellungen der Ressource
         //* = inhalte der Ressource wird f�r alle Zug�nglich gemacht
         // Response-Body
-        _response.write("Ich höre Stimmen!!<br>");
-        _response.write("Port: " + port + "<br>");
-        _response.write("Method: " + _request.method + "<br>");
-        _response.write("Url: " + _request.url + "<br>");
-        _response.write("Headers: " + _request.headers + "<br>");
+        _response.write("Deine Bestellung war erfolgreich!");
         // ? Ruft parse funktion aus node.d.ts auf und �bergibt request.url und den boolean wert true
         let query = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten
         // ?//geht nach dem Namen statt nach ner Number
