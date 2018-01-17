@@ -41,7 +41,7 @@ var ServerTest;
         let query = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
         // ?//geht nach dem Namen statt nach ner Number
         for (let key in query)
-            console.log(key + ": " + query[key] + "<br>");
+            _response.write(key + ": " + query[key] + "<br>");
         // Antwort abschließen und abschicken
         _response.end();
     }
