@@ -41,13 +41,13 @@ namespace ServerTest {
         
         // Response-Body
         _response.write("Servermeldung: Deine Bestellung war erfolgreich!");
-
+        _response.write("Deine Bestellung:");
 
         // ? Ruft parse funktion aus node.d.ts auf und übergibt request.url und den boolean wert true
-        let query: AssocStringString = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten
+        let query: AssocStringString = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
         // ?//geht nach dem Namen statt nach ner Number
         for (let key in query) 
-            console.log(key + ": " + query[key]);
+            console.log(key + ": " + query[key]+ "<br>");
         
         // Antwort abschlieÃŸen und abschicken
         _response.end();

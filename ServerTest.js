@@ -32,11 +32,12 @@ var ServerTest;
         //* = inhalte der Ressource wird f�r alle Zug�nglich gemacht
         // Response-Body
         _response.write("Servermeldung: Deine Bestellung war erfolgreich!");
+        _response.write("Deine Bestellung:");
         // ? Ruft parse funktion aus node.d.ts auf und �bergibt request.url und den boolean wert true
-        let query = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten
+        let query = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
         // ?//geht nach dem Namen statt nach ner Number
         for (let key in query)
-            console.log(key + ": " + query[key]);
+            console.log(key + ": " + query[key] + "<br>");
         // Antwort abschließen und abschicken
         _response.end();
     }
