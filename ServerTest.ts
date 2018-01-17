@@ -42,10 +42,6 @@ namespace ServerTest {
         // Response-Body
         _response.write("Servermeldung: Deine Bestellung war erfolgreich!");
         _response.write("Deine Bestellung:");
-        _response.write("Port: " + port + "<br>");
-        _response.write("Method: " + _request.method + "<br>");
-        _response.write("Url: " + _request.url + "<br>");
-        _response.write("Headers: " + _request.headers + "<br>");
 
         // ? Ruft parse funktion aus node.d.ts auf und übergibt request.url und den boolean wert true
         let query: AssocStringString = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
