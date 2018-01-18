@@ -23,7 +23,7 @@ var ServerTest;
     }
     // Request-Event: Verarbeiten der Request und erstellen der Response
     function handleRequest(_request, _response) {
-        console.log("Ich höre Stimmen!!");
+        console.log("Ich h�re Stimmen!!");
         // Header: Antwort kommt im HTML-Format mit uft-8
         _response.setHeader("content-type", "text/html; charset=utf-8");
         // Header: ?
@@ -32,7 +32,10 @@ var ServerTest;
         //* = inhalte der Ressource wird f�r alle Zug�nglich gemacht
         // Response-Body
         _response.write("Servermeldung: Deine Bestellung war erfolgreich!");
-        _response.write("Deine Bestellung:");
+        _response.write("Deine Bestellung:" + "<br>");
+        _response.write("Method: " + _request.method + "<br>");
+        _response.write("Url: " + _request.url + "<br>");
+        _response.write("Headers: " + _request.headers + "<br>");
         // ? Ruft parse funktion aus node.d.ts auf und �bergibt request.url und den boolean wert true
         let query = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
         // ?//geht nach dem Namen statt nach ner Number

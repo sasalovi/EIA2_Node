@@ -31,7 +31,7 @@ namespace ServerTest {
 
     // Request-Event: Verarbeiten der Request und erstellen der Response
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-        console.log("Ich hÃ¶re Stimmen!!");
+        console.log("Ich höre Stimmen!!");
         // Header: Antwort kommt im HTML-Format mit uft-8
         _response.setHeader("content-type", "text/html; charset=utf-8");
         // Header: ?
@@ -41,7 +41,10 @@ namespace ServerTest {
         
         // Response-Body
         _response.write("Servermeldung: Deine Bestellung war erfolgreich!");
-        _response.write("Deine Bestellung:");
+        _response.write("Deine Bestellung:" + "<br>");
+         _response.write("Method: " + _request.method + "<br>");
+        _response.write("Url: " + _request.url + "<br>");
+_response.write("Headers: " + _request.headers + "<br>");
 
         // ? Ruft parse funktion aus node.d.ts auf und übergibt request.url und den boolean wert true
         let query: AssocStringString = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
