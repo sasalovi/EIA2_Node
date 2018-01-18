@@ -36,6 +36,8 @@ var ServerTest;
         // ? Ruft parse funktion aus node.d.ts auf und �bergibt request.url und den boolean wert true
         let query = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
         // ?//geht nach dem Namen statt nach ner Number
+        //l�uft f�r jeden key durch
+        //bsp: query[baumart]=fichte
         for (let key in query)
             _response.write(key + ": " + query[key] + "<br>");
         // Antwort abschließen und abschicken

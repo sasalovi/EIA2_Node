@@ -46,6 +46,8 @@ namespace ServerTest {
         // ? Ruft parse funktion aus node.d.ts auf und übergibt request.url und den boolean wert true
         let query: AssocStringString = Url.parse(_request.url, true).query; //Empfangene URL verarbeiten; Parse zerlegt es in Einzelteile: Query ist ein assoziatives array string string
         // ?//geht nach dem Namen statt nach ner Number
+        //läuft für jeden key durch
+        //bsp: query[baumart]=fichte
         for (let key in query) 
             _response.write(key + ": " + query[key]+ "<br>");
         
