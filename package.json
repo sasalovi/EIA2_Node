@@ -3,9 +3,9 @@
 	"version" : "0.0.1",
 	"description" : "Testing node and server",
 	"author" : "Jirka Dell'Oro-Friedl'",
-	"main" : "ServerTest.js",
+	"main" : "Server.js",
 	"scripts" : {
-		"start" : "node ServerTest.js"
+		"start" : "node Server.js"
 	},
 	"engines" : {
 		"node" : "6.11.1"
