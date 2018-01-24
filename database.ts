@@ -12,7 +12,7 @@ let students: Mongo.Collection;
 
 if (process.env.NODE_ENV == "production") {
     //    databaseURL = "mongodb://username:password@hostname:port/database";
-    databaseURL = "mongodb://testuser:testpassword@ds129532.mlab.com:29532/eia2"; //hier an die eigene Datenbank bei mlab anpassen
+    databaseURL = "mongodb://<dbuser>:<dbpassword>@ds113738.mlab.com:13738/eia2_sasalovi"; //hier an die eigene Datenbank bei mlab anpassen
     databaseName = "eia2";
 }
 
