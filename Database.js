@@ -12,7 +12,7 @@ let students;
 if (process.env.NODE_ENV == "production") {
     //    databaseURL = "mongodb://username:password@hostname:port/database";
     databaseURL = "mongodb://testuser:test@ds113738.mlab.com:13738/eia2_sasalovi"; //hier an die eigene Datenbank bei mlab anpassen
-    databaseName = "eia2";
+    databaseName = "eia2_sasalovi";
 }
 Mongo.MongoClient.connect(databaseURL, handleConnect); //adresse der datenbank und handler, der aufgerufen wird wenn connection zu stande kommt �bergeben (ist asynchron) --> handler ist in diesem Fall die handleConnect funktion
 function handleConnect(_e, _db) {
