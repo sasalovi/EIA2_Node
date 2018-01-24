@@ -1,4 +1,4 @@
-# EIA2-W17_Node
-Server code für W17
+# EIA2_Node
+Servercode für WS17/18
 
-Repository connection established!
+Test
